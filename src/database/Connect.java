@@ -8,24 +8,24 @@ import javax.swing.JOptionPane;
 
 public class Connect {
 
-    Connection a;
+    Connection connection;
     private String url;
     private String driver;
-    private String uname;
-    private String pword;
+    private String username;
+    private String password;
     private String dbname;
 
     public Connection Conn() {
-        a = null;
+        connection = null;
         url = "jdbc:mysql://localhost:3306/";
         driver = "com.mysql.jdbc.Driver";
-        uname = "root";
-        pword = "";
+        username = "root";
+        password = "";
         dbname = "mydb";
         try {
             Class.forName(driver).newInstance();
-            a = DriverManager.getConnection(url + dbname, uname, pword);
-            System.out.println("Connected");
+            connection = DriverManager.getConnection(url + dbname, username, password);
+            System.out.println("Connection Successful");
 
 
         } catch (ClassNotFoundException ex) {
@@ -37,13 +37,13 @@ public class Connect {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
-        return a;
+        return connection;
     }
 
     public ResultSet getQuery(String query) {
         ResultSet r = null;
         try {
-            a = Conn();
+            connection = Conn();
 
             Statement s = Conn().createStatement();
             r = s.executeQuery(query);
@@ -60,7 +60,7 @@ public class Connect {
     public boolean setQuery(String query) {
 
         try {
-            a = Conn();
+            connection = Conn();
          
             Statement s = Conn().createStatement();
             s.execute(query);
@@ -73,7 +73,7 @@ public class Connect {
             return false; // query failed
         } finally {
             try {
-                a.close();
+                connection.close();
                 System.out.println("Connection closed");
             } catch (SQLException ex) {
                 Logger.getLogger(Connect.class.getName()).log(Level.SEVERE, null, ex);
@@ -88,7 +88,7 @@ public class Connect {
     public int setQuery(String query, String column_name) {
         int i = 0;
         try {
-            a = Conn();
+            connection = Conn();
 
             Statement stmt = Conn().prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             stmt.execute(query, Statement.RETURN_GENERATED_KEYS);
