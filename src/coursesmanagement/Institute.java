@@ -17,6 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 import main.Keyboard;
 import notifications.ConfirmDialog;
 import notifications.Message;
@@ -40,9 +41,10 @@ public class Institute extends javax.swing.JFrame {
     
     public Institute() {
         initComponents();
-         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
+//         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
         dtm=(DefaultTableModel) instituteDetailsTable.getModel();
+        DragJFrame df=new DragJFrame(this, jPanel2);
     }
     
      public static Institute getInstance(){

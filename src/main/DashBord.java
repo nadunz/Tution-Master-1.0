@@ -37,11 +37,12 @@ public class DashBord extends javax.swing.JFrame {
     
     public DashBord() {
         initComponents();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
+//        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
 
         runDateAndTime();
         setLoginTime();
+        new DragJFrame(this, jPanel9);
     }
     
     private void runDateAndTime(){

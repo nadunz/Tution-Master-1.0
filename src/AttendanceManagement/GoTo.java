@@ -12,6 +12,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import javax.swing.DefaultComboBoxModel;
+import main.DragJFrame;
 
 /**
  *
@@ -38,6 +39,7 @@ public class GoTo extends javax.swing.JFrame {
         int width=(int) dimension.getWidth();
         int height=(int) dimension.getHeight();
         this.setLocation((width/2)-174,(height/2)-99);
+        DragJFrame df=new DragJFrame(this, jPanel1);
         
         
     }

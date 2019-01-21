@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Nadun/Documents/NetBeansProjects/StudentManagingSystem/src/studentmanagement/NewApplication.java</file>
-            <file>file:/C:/Users/Nadun/Documents/NetBeansProjects/StudentManagingSystem/src/studentmanagement/CardMarkingStartupScreen.java</file>
+            <file>file:/C:/Users/Nadun/Documents/NetBeansProjects/Tution-Master-1.0/src/studentmanagement/ApplicationView.java</file>
+            <file>file:/C:/Users/Nadun/Documents/NetBeansProjects/Tution-Master-1.0/src/coursesmanagement/CoursesSelector.java</file>
+            <file>file:/C:/Users/Nadun/Documents/NetBeansProjects/Tution-Master-1.0/src/studentmanagement/NewApplication.java</file>
+            <file>file:/C:/Users/Nadun/Documents/NetBeansProjects/Tution-Master-1.0/src/coursesmanagement/InstituteSelector.java</file>
         </group>
     </open-files>
 </project-private>

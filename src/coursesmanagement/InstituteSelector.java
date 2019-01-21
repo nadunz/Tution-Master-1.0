@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 
 /**
  *
@@ -31,6 +32,7 @@ public class InstituteSelector extends javax.swing.JFrame {
         int width=(int) dimension.getWidth();
         int height=(int) dimension.getHeight();
         this.setLocation((width/2)-205,(height/2)-135);
+        DragJFrame df=new DragJFrame(this, jPanel1);
     }
     
      public static InstituteSelector getInstance(){

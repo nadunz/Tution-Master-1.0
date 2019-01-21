@@ -7,6 +7,7 @@ package coursesmanagement;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 
 /**
  *
@@ -26,6 +27,7 @@ public class CourseNameTemplate extends javax.swing.JFrame {
         int width=(int) dimension.getWidth();
         int height=(int) dimension.getHeight();
         this.setLocation((width/2)-169,(height/2)-103);
+        DragJFrame df=new DragJFrame(this, jPanel15);
     }
     
     public static CourseNameTemplate getInstance(){

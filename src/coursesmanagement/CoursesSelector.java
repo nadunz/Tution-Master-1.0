@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 import notifications.WarningMessage;
 import studentmanagement.NewApplication;
 
@@ -33,6 +34,7 @@ public class CoursesSelector extends javax.swing.JFrame {
         int width=(int) dimension.getWidth();
         int height=(int) dimension.getHeight();
         this.setLocation((width/2)-342,(height/2)-227);
+        DragJFrame df=new DragJFrame(this, jPanel1);
         
     }
     
@@ -164,12 +166,14 @@ public class CoursesSelector extends javax.swing.JFrame {
         coursesTable.setSelectionForeground(new java.awt.Color(204, 204, 204));
         coursesTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(coursesTable);
-        coursesTable.getColumnModel().getColumn(0).setResizable(false);
-        coursesTable.getColumnModel().getColumn(0).setPreferredWidth(200);
-        coursesTable.getColumnModel().getColumn(1).setResizable(false);
-        coursesTable.getColumnModel().getColumn(1).setPreferredWidth(120);
-        coursesTable.getColumnModel().getColumn(2).setResizable(false);
-        coursesTable.getColumnModel().getColumn(2).setPreferredWidth(100);
+        if (coursesTable.getColumnModel().getColumnCount() > 0) {
+            coursesTable.getColumnModel().getColumn(0).setResizable(false);
+            coursesTable.getColumnModel().getColumn(0).setPreferredWidth(200);
+            coursesTable.getColumnModel().getColumn(1).setResizable(false);
+            coursesTable.getColumnModel().getColumn(1).setPreferredWidth(120);
+            coursesTable.getColumnModel().getColumn(2).setResizable(false);
+            coursesTable.getColumnModel().getColumn(2).setPreferredWidth(100);
+        }
 
         jLabel1.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 26)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(153, 153, 153));
@@ -228,7 +232,7 @@ public class CoursesSelector extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator1)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -240,7 +244,7 @@ public class CoursesSelector extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addGap(388, 388, 388)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,9 +271,7 @@ public class CoursesSelector extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

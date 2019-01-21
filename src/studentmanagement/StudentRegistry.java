@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 import main.Keyboard;
 import notifications.ConfirmDialog;
 import notifications.Message;
@@ -37,8 +38,9 @@ public class StudentRegistry extends javax.swing.JFrame {
     public StudentRegistry() {
         initComponents();
         dtm=(DefaultTableModel) studentTabel.getModel();
-         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
+//         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
+        DragJFrame df=new DragJFrame(this, jPanel3);
     }
     
     public static StudentRegistry getInstance(){

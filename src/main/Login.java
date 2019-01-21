@@ -31,6 +31,7 @@ public class Login extends javax.swing.JFrame {
         int width=(int) dimension.getWidth();
         int height=(int) dimension.getHeight();
         this.setLocation((width/2)-226,(height/2)-112);
+        DragJFrame df=new DragJFrame(this, jPanel1);
         
         getUser();
     }

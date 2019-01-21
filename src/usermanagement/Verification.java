@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTextField;
+import main.DragJFrame;
 import main.Login;
 
 /**
@@ -36,6 +37,7 @@ public class Verification extends javax.swing.JFrame {
         int width=(int) dimension.getWidth();
         int height=(int) dimension.getHeight();
         this.setLocation((width/2)-226,(height/2)-112);
+        DragJFrame df=new DragJFrame(this, jPanel1);
         
         getUser();
     }

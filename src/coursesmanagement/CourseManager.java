@@ -13,6 +13,7 @@ import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 import main.Keyboard;
 import notifications.ConfirmDialog;
 import notifications.Message;
@@ -36,9 +37,9 @@ public class CourseManager extends javax.swing.JFrame {
     public CourseManager() {
         initComponents();
         dtm=(DefaultTableModel) courseTable.getModel();
-         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
-        
+//         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
+        DragJFrame df=new DragJFrame(this, jPanel2);
         
     }
     

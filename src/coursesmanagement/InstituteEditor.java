@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import main.DragJFrame;
 import notifications.Message;
 import notifications.WarningMessage;
 
@@ -34,6 +35,7 @@ public class InstituteEditor extends javax.swing.JFrame {
         int width=(int) dimension.getWidth();
         int height=(int) dimension.getHeight();
         this.setLocation((width/2)-247,(height/2)-121);
+        DragJFrame df=new DragJFrame(this, jPanel1);
     }
     
     public static InstituteEditor getInstance(){
