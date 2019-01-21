@@ -68,25 +68,15 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel9" alignment="0" min="-2" pref="176" max="-2" attributes="0"/>
                               <Component id="courseFeeTxt" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                              <Component id="startDateCombobox" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel8" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                                      <Component id="instituteTxt" alignment="0" min="-2" pref="174" max="-2" attributes="0"/>
                                       <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel8" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                                              <Component id="instituteTxt" alignment="0" min="-2" pref="174" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="cityTxt" min="-2" pref="158" max="-2" attributes="0"/>
-                                      </Group>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cityTxt" min="-2" pref="158" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="instituteSelecterBtn" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
@@ -97,11 +87,14 @@
                                   <Component id="templateBtn" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="27" max="32767" attributes="0"/>
+                          <EmptySpace pref="47" max="32767" attributes="0"/>
+                          <Component id="jPanel5" min="-2" pref="90" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="startDateCombobox" min="-2" pref="174" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="jPanel5" min="-2" pref="90" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -130,9 +123,9 @@
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jLabel7" min="-2" pref="32" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="startDateCombobox" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                  <Component id="startDateCombobox" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel9" min="-2" pref="32" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="courseFeeTxt" min="-2" pref="32" max="-2" attributes="0"/>
@@ -691,19 +684,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cityTxtActionPerformed"/>
           </Events>
         </Component>
-        <Component class="de.wannawork.jcalendar.JCalendarComboBox" name="startDateCombobox">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="24" green="1" red="7" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="66" red="66" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Swis721 LtEx BT" size="16" style="0"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="newCourseLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -714,6 +694,8 @@
             </Property>
             <Property name="text" type="java.lang.String" value="New Course"/>
           </Properties>
+        </Component>
+        <Component class="de.wannawork.jcalendar.JCalendarComboBox" name="startDateCombobox">
         </Component>
       </SubComponents>
     </Container>

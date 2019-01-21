@@ -107,7 +107,7 @@
                       <Component id="jLabel13" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="cityTxt" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="51" max="32767" attributes="0"/>
+                  <EmptySpace pref="53" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
