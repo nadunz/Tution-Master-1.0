@@ -32,18 +32,18 @@ public class PaymentManager extends javax.swing.JFrame {
      * Creates new form PaymentManager
      */
     private DefaultTableModel dtm;
-    public static final int NEXT=1, PREVIOUS=2, ANYWHERE=3;
+    public static final int NEXT = 1, PREVIOUS = 2, ANYWHERE = 3;
     private int currentYear, currentMonth, labelYear, labelMonth;
     private String editing_student_id,courseName,instituteName,cityName,payment_date,paid_amount,card_type,classCalendarID;
     
-    private static PaymentManager instance=new PaymentManager();
+    private static PaymentManager instance = new PaymentManager();
     private int editingRow, paymentInteger;
     
     public PaymentManager() {
         initComponents();
         
-        dtm=(DefaultTableModel) paymentTabel.getModel();
-         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        dtm = (DefaultTableModel) paymentTabel.getModel();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.setSize(screenSize);
     }
     
@@ -65,11 +65,11 @@ public class PaymentManager extends javax.swing.JFrame {
     
     private void getCurrentMonth(){
          
-        Calendar c=new GregorianCalendar();
-        currentYear=c.get(Calendar.YEAR);
-        currentMonth=c.get(Calendar.MONTH)+1;
-        labelYear=currentYear;
-        labelMonth=currentMonth;
+        Calendar c = new GregorianCalendar();
+        currentYear = c.get(Calendar.YEAR);
+        currentMonth = c.get(Calendar.MONTH)+1;
+        labelYear = currentYear;
+        labelMonth = currentMonth;
        
      }
    
@@ -90,7 +90,7 @@ public class PaymentManager extends javax.swing.JFrame {
     
     private void setMonth(){
         
-        String monthName=null;
+        String monthName = null;
         
         switch(labelMonth){
             case 1:
@@ -143,22 +143,23 @@ public class PaymentManager extends javax.swing.JFrame {
     private String getSelectedMonthName(){
         
         String year = yearLabel.getText();
-        String month=monthLabel.getText();
+        String month= monthLabel.getText();
         
         return (year+" "+month);
         
     }
     
     
-    private void addDataToTabel(int Student_id,String barcode,String stuName,String cardType,String institute,String amount,
-            String city,String payment,String paymentDate,String course){
+    public void addDataToTabel(int Student_id,String barcode,String stuName,
+            String cardType,String institute,String amount,String city,String payment,
+            String paymentDate,String course){
+            
+            String [] row = {Integer.toString(Student_id),stuName,barcode,course,institute,city,cardType,getSelectedMonthName(),payment,amount,paymentDate};
         
-            String[] array={Integer.toString(Student_id),stuName,barcode,course,institute,city,cardType,getSelectedMonthName(),payment,amount,paymentDate};
-        
-             if(!(!payment.equals("Completed") && hasDuplicateRow(array))){
+             if(!(!payment.equals("Completed") && hasDuplicateRow(row))){
             
                 dtm.addRow(new Object[]{Student_id,stuName,barcode,course,institute,city,cardType,getSelectedMonthName(),payment,amount,paymentDate});
-        
+                System.out.println("Data Adding Success");
                 
         }
     
@@ -178,7 +179,7 @@ public class PaymentManager extends javax.swing.JFrame {
    
     private boolean hasDuplicateRow(String[] stringArray){
         
-        boolean duplicate=false;
+        boolean IsDuplicate = false;
         int rowCount = dtm.getRowCount();
         for (int i = 0; i < rowCount; i++) {
             
@@ -197,25 +198,25 @@ public class PaymentManager extends javax.swing.JFrame {
             if(id.equals(stringArray[0]) && name.equals(stringArray[1]) && barcode.equals(stringArray[2]) && course.equals(stringArray[3]) &&
                     institute.equals(stringArray[4]) && city.equals(stringArray[5]) && cardType.equals(stringArray[6]) && month.equals(stringArray[7]) &&
                     payment.equals(stringArray[8]) && amount.equals(stringArray[9]) && paymentDate.equals(stringArray[10])){
-                duplicate=true;
+                IsDuplicate = true;
                 i=rowCount-1;
             }
             
         }
         
         
-        return duplicate;
+        return IsDuplicate;
     }
     
     private void removeOptionalRow(){
         
-        ArrayList<String> al=new ArrayList<String>();
+        ArrayList<String> al = new ArrayList<String>();
                 int rowCount = dtm.getRowCount();
                 for (int i = 0; i < rowCount; i++) {
-            String payment = dtm.getValueAt(i, 8).toString();
-            String stuID = dtm.getValueAt(i, 0).toString();
-            if(payment.equals("Completed")){
-               al.add(stuID);
+                    String payment = dtm.getValueAt(i, 8).toString();
+                    String stuID = dtm.getValueAt(i, 0).toString();
+                    if(payment.equals("Completed")){
+                        al.add(stuID);
             }
             }
                 for(String id : al){
@@ -492,7 +493,7 @@ public class PaymentManager extends javax.swing.JFrame {
                        + " WHERE inst.delete_status=0 AND cour.delete_status=0 AND cour.name='"+courseName+"' AND "
                        + "inst.name='"+instituteName+"' AND inst.city='"+cityName+"' ORDER BY cal.date DESC LIMIT 1";
         
-        Connect con=new Connect();
+        Connect con = new Connect();
         ResultSet re=con.getQuery(query);
         try {
             while (re.next()) {            
@@ -516,7 +517,7 @@ public class PaymentManager extends javax.swing.JFrame {
     
     public void changePayment(int newPayment){
         
-        Connect con=new Connect();
+        Connect con = new Connect();
         if(newPayment!=paymentInteger){
             
             if(newPayment==0){
