@@ -4,7 +4,7 @@ A stand-alone application using Java Swing to manage student information, fee pa
 ## Configurations
   - Database:
     - Run `Wampserver` or `Xampp`
-    - Import `student_db.sql` 
+    - Import `mydb.sql` 
 
 ## Running
   - Application:
