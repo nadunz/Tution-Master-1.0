@@ -23,7 +23,7 @@ public class InstituteEditor extends javax.swing.JFrame {
     /**
      * Creates new form InstituteEditor
      */
-    private static InstituteEditor instance=new InstituteEditor();
+    private static InstituteEditor instance = new InstituteEditor();
     private String instituteID;
     private String institute;
     private String city;
@@ -73,6 +73,7 @@ public class InstituteEditor extends javax.swing.JFrame {
            
            return have;  
     }
+    
     
     
     private void clearText(){

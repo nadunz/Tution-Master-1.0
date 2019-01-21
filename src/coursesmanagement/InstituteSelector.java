@@ -23,7 +23,7 @@ public class InstituteSelector extends javax.swing.JFrame {
      * Creates new form InstituteSelecter
      */
     private DefaultTableModel dtm;
-    private static InstituteSelector instance=new InstituteSelector();
+    private static InstituteSelector instance = new InstituteSelector();
     public InstituteSelector() {
         initComponents();
         dtm=(DefaultTableModel) instituteSelecterTable.getModel();
@@ -32,6 +32,7 @@ public class InstituteSelector extends javax.swing.JFrame {
         int height=(int) dimension.getHeight();
         this.setLocation((width/2)-205,(height/2)-135);
     }
+    
     
      public static InstituteSelector getInstance(){
         return instance;  

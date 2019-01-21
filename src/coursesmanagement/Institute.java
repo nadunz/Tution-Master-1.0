@@ -36,7 +36,7 @@ public class Institute extends javax.swing.JFrame {
     private int selectedRowCount;
     private int[] selectedRows;
     private DefaultTableModel dtm;
-    private static Institute instance=new Institute();
+    private static Institute instance = new Institute();
     
     public Institute() {
         initComponents();
