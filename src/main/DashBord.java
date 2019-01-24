@@ -28,7 +28,9 @@ import usermanagement.Verification;
  */
 public class DashBord extends javax.swing.JFrame {
 
-   
+    /**
+     * Creates new form DashBoard
+     */
    
     private static DashBord instance=new DashBord();
     private String userName;
@@ -485,7 +487,7 @@ public class DashBord extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Swis721 LtEx BT", 1, 50)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(67, 60, 99));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("TUTION");
+        jLabel11.setText("TUITION");
 
         clock.setFont(new java.awt.Font("Swis721 LtEx BT", 1, 43)); // NOI18N
         clock.setForeground(new java.awt.Color(67, 60, 99));
@@ -616,7 +618,7 @@ public class DashBord extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Segoe Print", 1, 20)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(102, 102, 113));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("TUTION MANAGEMENT SYSTEM");
+        jLabel13.setText("TUITION MANAGEMENT SYSTEM");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -705,6 +707,7 @@ public class DashBord extends javax.swing.JFrame {
     private void newStudentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newStudentBtnActionPerformed
 
         NewApplication.getInstance().showInterface();
+        
     }//GEN-LAST:event_newStudentBtnActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed

@@ -711,7 +711,7 @@
                       <Color blue="63" green="3c" red="43" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="TUTION"/>
+                    <Property name="text" type="java.lang.String" value="TUITION"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="clock">
@@ -954,7 +954,7 @@
                   <Color blue="71" green="66" red="66" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="TUTION MANAGEMENT SYSTEM"/>
+                <Property name="text" type="java.lang.String" value="TUITION MANAGEMENT SYSTEM"/>
               </Properties>
             </Component>
           </SubComponents>
