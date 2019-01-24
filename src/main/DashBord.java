@@ -28,9 +28,7 @@ import usermanagement.Verification;
  */
 public class DashBord extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DashBoard
-     */
+   
    
     private static DashBord instance=new DashBord();
     private String userName;
