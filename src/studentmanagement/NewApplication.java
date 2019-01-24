@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 import main.Keyboard;
 import notifications.Message;
 import notifications.SavedStatusNotice;
@@ -39,9 +40,11 @@ public class NewApplication extends javax.swing.JFrame {
     public NewApplication() {
         initComponents();
         dtm=(DefaultTableModel) courseTabel.getModel();
-        
-         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
+//        
+//         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
+            DragJFrame df=new DragJFrame(this, jPanel2);
+
     }
     
     public static NewApplication getInstance(){
@@ -56,7 +59,7 @@ public class NewApplication extends javax.swing.JFrame {
         
     }
     
-    private Date parseDate(String stringDate){
+    public Date parseDate(String stringDate){
         Date date=null;
         DateFormat df=new SimpleDateFormat("yyyy-MM-dd");
         
@@ -613,7 +616,7 @@ public class NewApplication extends javax.swing.JFrame {
         barcodeTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         barcodeTxt.setForeground(new java.awt.Color(102, 102, 102));
         barcodeTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        barcodeTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        barcodeTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         barcodeTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         barcodeTxt.setNextFocusableComponent(AddressTxt);
         barcodeTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -626,7 +629,7 @@ public class NewApplication extends javax.swing.JFrame {
         fullNameTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         fullNameTxt.setForeground(new java.awt.Color(102, 102, 102));
         fullNameTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        fullNameTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        fullNameTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         fullNameTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         fullNameTxt.setNextFocusableComponent(barcodeTxt);
         fullNameTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -639,7 +642,7 @@ public class NewApplication extends javax.swing.JFrame {
         nameWithInitialsTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         nameWithInitialsTxt.setForeground(new java.awt.Color(102, 102, 102));
         nameWithInitialsTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        nameWithInitialsTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        nameWithInitialsTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         nameWithInitialsTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         nameWithInitialsTxt.setNextFocusableComponent(fullNameTxt);
         nameWithInitialsTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -652,7 +655,7 @@ public class NewApplication extends javax.swing.JFrame {
         telephoneTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         telephoneTxt.setForeground(new java.awt.Color(102, 102, 102));
         telephoneTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        telephoneTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        telephoneTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         telephoneTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         telephoneTxt.setNextFocusableComponent(courseTabel);
         telephoneTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -665,7 +668,7 @@ public class NewApplication extends javax.swing.JFrame {
         mobileTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         mobileTxt.setForeground(new java.awt.Color(102, 102, 102));
         mobileTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        mobileTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        mobileTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         mobileTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         mobileTxt.setNextFocusableComponent(telephoneTxt);
         mobileTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -678,7 +681,7 @@ public class NewApplication extends javax.swing.JFrame {
         nicTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         nicTxt.setForeground(new java.awt.Color(102, 102, 102));
         nicTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        nicTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        nicTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         nicTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         nicTxt.setNextFocusableComponent(mobileTxt);
         nicTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -691,7 +694,7 @@ public class NewApplication extends javax.swing.JFrame {
         emailTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         emailTxt.setForeground(new java.awt.Color(102, 102, 102));
         emailTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        emailTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        emailTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         emailTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         emailTxt.setNextFocusableComponent(guardianTxt);
         emailTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -704,7 +707,7 @@ public class NewApplication extends javax.swing.JFrame {
         guardianTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         guardianTxt.setForeground(new java.awt.Color(102, 102, 102));
         guardianTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        guardianTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        guardianTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         guardianTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         guardianTxt.setNextFocusableComponent(guardianPhoneTxt);
         guardianTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -717,7 +720,7 @@ public class NewApplication extends javax.swing.JFrame {
         guardianPhoneTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         guardianPhoneTxt.setForeground(new java.awt.Color(102, 102, 102));
         guardianPhoneTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        guardianPhoneTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        guardianPhoneTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         guardianPhoneTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         guardianPhoneTxt.setNextFocusableComponent(saveBtn);
         guardianPhoneTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -788,7 +791,7 @@ public class NewApplication extends javax.swing.JFrame {
         AddressTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 17)); // NOI18N
         AddressTxt.setForeground(new java.awt.Color(102, 102, 102));
         AddressTxt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        AddressTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 25, 54)));
+        AddressTxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(24, 42, 81)));
         AddressTxt.setCaretColor(new java.awt.Color(153, 153, 153));
         AddressTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

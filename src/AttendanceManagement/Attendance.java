@@ -5,19 +5,16 @@
 package AttendanceManagement;
 
 import database.Connect;
-import java.awt.AWTException;
 import java.awt.Dimension;
-import java.awt.Robot;
 import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 import main.Keyboard;
 import notifications.ConfirmDialog;
 import notifications.Message;
@@ -48,8 +45,9 @@ public class Attendance extends javax.swing.JFrame {
         initComponents();
   
         dtm=(DefaultTableModel) attendanceTbl.getModel();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
+//        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
+            DragJFrame df=new DragJFrame(this, jPanel2);
        
     }
      public static Attendance getInstance(){

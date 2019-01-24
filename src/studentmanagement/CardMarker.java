@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import main.DragJFrame;
 import main.Keyboard;
 import notifications.Message;
 import notifications.SavedStatusNotice;
@@ -42,9 +43,9 @@ public class CardMarker extends javax.swing.JFrame {
        
     public CardMarker() {
         initComponents();
-         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
-        
+//         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
+        DragJFrame df=new DragJFrame(this, jPanel2);
     }
     
     public static CardMarker getInstance(){

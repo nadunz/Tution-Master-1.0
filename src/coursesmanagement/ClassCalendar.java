@@ -15,6 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 import main.Keyboard;
 import notifications.Message;
 import notifications.SavedStatusNotice;
@@ -34,10 +35,11 @@ public class ClassCalendar extends javax.swing.JFrame {
     private static ClassCalendar instance=new ClassCalendar();
     public ClassCalendar() {
         initComponents();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
+//        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
         dtm=(DefaultTableModel) classCalendarTbl.getModel();
         dcm=(DefaultComboBoxModel) yearCombo.getModel();
+        DragJFrame df=new DragJFrame(this, jPanel2);
     }
     
     public static ClassCalendar getInstance(){

@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 
 /**
  *
@@ -29,8 +30,9 @@ public class ApplicationView extends javax.swing.JFrame {
         initComponents();
         
         dtm=(DefaultTableModel) courseTabel.getModel();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
+//        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
+            DragJFrame df=new DragJFrame(this, jPanel2);
     }
     
      

@@ -565,7 +565,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -595,7 +595,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -625,7 +625,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -655,7 +655,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -685,7 +685,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -715,7 +715,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -745,7 +745,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -775,7 +775,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -805,7 +805,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>
@@ -970,7 +970,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
-                  <Color PropertyName="color" blue="36" green="19" red="18" type="rgb"/>
+                  <Color PropertyName="color" blue="51" green="2a" red="18" type="rgb"/>
                 </LineBorder>
               </Border>
             </Property>

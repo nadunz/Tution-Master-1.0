@@ -27,10 +27,11 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         
-        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
-        int width=(int) dimension.getWidth();
-        int height=(int) dimension.getHeight();
-        this.setLocation((width/2)-226,(height/2)-112);
+//        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+//        int width=(int) dimension.getWidth();
+//        int height=(int) dimension.getHeight();
+        this.setLocationRelativeTo(null);
+        DragJFrame df=new DragJFrame(this, jPanel1);
         
         getUser();
     }
@@ -108,6 +109,7 @@ public class Login extends javax.swing.JFrame {
         cancelBtn = new javax.swing.JButton();
         passwordTxt = new javax.swing.JPasswordField();
         userNameTxt = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         LoginBtn = new javax.swing.JButton();
@@ -132,7 +134,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jDesktopPane1.add(cancelBtn);
-        cancelBtn.setBounds(340, 170, 80, 30);
+        cancelBtn.setBounds(630, 380, 80, 30);
 
         passwordTxt.setBackground(new java.awt.Color(56, 57, 117));
         passwordTxt.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
@@ -145,7 +147,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jDesktopPane1.add(passwordTxt);
-        passwordTxt.setBounds(180, 100, 240, 30);
+        passwordTxt.setBounds(560, 290, 240, 30);
 
         userNameTxt.setBackground(new java.awt.Color(56, 57, 117));
         userNameTxt.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 15)); // NOI18N
@@ -159,21 +161,27 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jDesktopPane1.add(userNameTxt);
-        userNameTxt.setBounds(180, 60, 240, 30);
+        userNameTxt.setBounds(560, 250, 240, 30);
 
-        jLabel4.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setFont(new java.awt.Font("Swis721 LtEx BT", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel5.setText("User Name");
+        jDesktopPane1.add(jLabel5);
+        jLabel5.setBounds(430, 250, 120, 30);
+
+        jLabel4.setFont(new java.awt.Font("Swis721 LtEx BT", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("Password");
         jDesktopPane1.add(jLabel4);
-        jLabel4.setBounds(50, 100, 110, 30);
+        jLabel4.setBounds(430, 290, 110, 30);
 
-        jLabel3.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel3.setFont(new java.awt.Font("Swis721 LtEx BT", 1, 36)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText("User Name");
+        jLabel3.setText("TUITION MASTER 1.0");
         jDesktopPane1.add(jLabel3);
-        jLabel3.setBounds(50, 60, 120, 30);
+        jLabel3.setBounds(280, 50, 390, 30);
 
         LoginBtn.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 14)); // NOI18N
         LoginBtn.setText("Login");
@@ -186,37 +194,35 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jDesktopPane1.add(LoginBtn);
-        LoginBtn.setBounds(200, 170, 80, 30);
+        LoginBtn.setBounds(720, 380, 80, 30);
 
         jLabel2.setFont(new java.awt.Font("Swis721 LtEx BT", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("LOGIN");
         jDesktopPane1.add(jLabel2);
-        jLabel2.setBounds(140, 0, 170, 50);
+        jLabel2.setBounds(600, 180, 170, 50);
 
-        notificationLabel.setFont(new java.awt.Font("Swis721 LtEx BT", 0, 14)); // NOI18N
-        notificationLabel.setForeground(new java.awt.Color(102, 255, 102));
+        notificationLabel.setFont(new java.awt.Font("Swis721 LtEx BT", 1, 14)); // NOI18N
+        notificationLabel.setForeground(new java.awt.Color(102, 255, 51));
         jDesktopPane1.add(notificationLabel);
-        notificationLabel.setBounds(90, 134, 330, 30);
+        notificationLabel.setBounds(430, 330, 370, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/loginBackground.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/login_page.jpg"))); // NOI18N
         jDesktopPane1.add(jLabel1);
-        jLabel1.setBounds(-6, 0, 460, 230);
+        jLabel1.setBounds(-6, 0, 820, 430);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -227,7 +233,7 @@ public class Login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -302,6 +308,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel notificationLabel;
     private javax.swing.JPasswordField passwordTxt;

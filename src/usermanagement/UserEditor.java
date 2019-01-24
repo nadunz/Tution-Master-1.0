@@ -7,6 +7,7 @@ package usermanagement;
 import database.Connect;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import main.DragJFrame;
 import notifications.SavedStatusNotice;
 
 /**
@@ -27,6 +28,7 @@ public class UserEditor extends javax.swing.JFrame {
         int width=(int) dimension.getWidth();
         int height=(int) dimension.getHeight();
         this.setLocation((width/2)-228,(height/2)-170);
+        DragJFrame df=new DragJFrame(this, jPanel1);
         
     }
     

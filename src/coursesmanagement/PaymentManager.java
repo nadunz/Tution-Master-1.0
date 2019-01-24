@@ -17,6 +17,7 @@ import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import main.DragJFrame;
 import main.Keyboard;
 import notifications.Message;
 import notifications.WarningMessage;
@@ -43,8 +44,9 @@ public class PaymentManager extends javax.swing.JFrame {
         initComponents();
         
         dtm=(DefaultTableModel) paymentTabel.getModel();
-         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setSize(screenSize);
+//         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        this.setSize(screenSize);
+            DragJFrame df=new DragJFrame(this, jPanel2);
     }
     
     public static PaymentManager getInstance(){
